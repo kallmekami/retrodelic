@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAMIOPS</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+
+<!-- CRT PANEL -->
+<div id="crt-panel"></div>
+<div id="crt-line"></div>
+
+<!-- RETRO LOADER -->
+<div id="retro-loader">
+  <div class="rl-title" id="rl-title">LOADING...</div>
+  <div class="rl-bar-wrap"><div class="rl-bar-fill" id="rl-fill"></div></div>
+  <div class="rl-pct" id="rl-pct">0%</div>
+</div>
+
+<!-- EASTER EGG -->
+<div id="easter-egg">
+  <div class="ee-matrix" id="ee-matrix"></div>
+  <div class="ee-title">☆ KONAMI UNLOCKED ☆</div>
+  <div class="ee-sub">YOU FOUND THE SECRET<br><br>KAMIOPS LEVEL 99<br>FULL STACK ACHIEVED</div>
+  <div style="font-family:var(--px);font-size:.4rem;color:#050;letter-spacing:.15em;margin-top:10px;">[ TAP TO CLOSE ]</div>
+</div>
+
+<!-- ══════════ INTRO ══════════ -->
+<div id="intro">
+  <div class="intro-device">
+    <div class="intro-screen">
+      <div class="intro-logo" id="introLogo">KAMIOPS</div>
+      <div class="press-start" id="pressStart">PRESS  START</div>
+      <div class="intro-copy">© 2026  KAMIOPS</div>
+    </div>
+    <div class="intro-badge">KAMIOPS</div>
+  </div>
+</div>
+
+<!-- ══════════ SITE ══════════ -->
+<div id="site">
+
+  <!-- ── HOME ── -->
+  <div id="page-home">
+    <header>
+      <div class="site-logo" id="siteLogo" onclick="showPage('home')">KAMIOPS</div>
+    </header>
+
+    <!-- NOW PLAYING -->
+    <div id="now-playing">
+      <div class="np-icon">▶</div>
+      <div class="np-track-wrap">
+        <span class="np-track" id="npTrack">KAMIOPS.FM  ──  LINUX SYSTEM ADMIN & DEVOPS ENGINEER  ──  RASHT, IRAN  ──  AVAILABLE FOR WORK  ──  K8S / DOCKER / GITLAB CI / PROMETHEUS / ANSIBLE  ──  </span>
+      </div>
+      <div class="np-eq">
+        <span style="--d:.3s;--h:12px"></span>
+        <span style="--d:.5s;--h:8px"></span>
+        <span style="--d:.4s;--h:14px"></span>
+        <span style="--d:.6s;--h:6px"></span>
+        <span style="--d:.35s;--h:10px"></span>
+      </div>
+    </div>
+
+    <div class="tv-section">
+      <div class="tv-wrap">
+        <div class="tv-screen">
+          <div class="tv-noise"></div>
+          <div class="tv-bars"></div>
+          <div class="tv-label">PORTFOLIO</div>
+        </div>
+        <div class="tv-dot"></div>
+      </div>
+    </div>
+
+    <nav class="nav-grid">
+      <div class="nav-item" onclick="showPage('about')">
+        <div class="nav-icon">
+          <div class="icon-term">
+            <span>$_</span>
+            <span style="font-size:.6rem;color:#007722">whoami</span>
+          </div>
+        </div>
+        <div class="nav-label nl-green">ABOUT</div>
+      </div>
+
+      <div class="nav-item" onclick="showPage('skills')">
+        <div class="nav-icon">
+          <div class="icon-k8s">⎈</div>
+        </div>
+        <div class="nav-label nl-dark">STACK</div>
+      </div>
+
+      <div class="nav-item" onclick="showPage('work')">
+        <div class="nav-icon">
+          <div class="icon-folder">📁</div>
+        </div>
+        <div class="nav-label nl-dark">WORK</div>
+      </div>
+
+      <div class="nav-item" onclick="showPage('contact')">
+        <div class="nav-icon">
+          <div class="icon-pager">
+            <div class="pager-screen"><span>PING ME</span></div>
+            <div class="pager-dots"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="nav-label nl-green">CONTACT</div>
+      </div>
+
+      <a class="nav-item" href="https://linkedin.com/in/kamyar-zarefar" target="_blank">
+        <div class="nav-icon" style="font-size:2.4rem;filter:drop-shadow(2px 3px 3px rgba(0,0,0,.35))">💼</div>
+        <div class="nav-label nl-orange">LINKEDIN</div>
+      </a>
+
+      <div class="nav-item" onclick="showPage('edu')">
+        <div class="nav-icon">
+          <div class="icon-q">?</div>
+        </div>
+        <div class="nav-label nl-red">EDU</div>
+      </div>
+    </nav>
+
+    <footer><p>© 2026 KAMIOPS  ·  RASHT, IRAN  ·  ↑↑↓↓←→←→BA</p></footer>
+  </div><!-- /page-home -->
+
+  <!-- ── ABOUT PAGE ── -->
+  <div id="page-about" class="page">
+    <button class="back-btn" onclick="showPage('home')">← BACK</button>
+    <div class="page-title">ABOUT</div>
+    <div class="about-block">
+      <strong>// SUMMARY</strong>
+      <p>Linux SysAdmin & DevOps Engineer with hands-on experience in hosting environments, containerization, and CI/CD automation. Keeping servers healthy, pipelines fast, and deployments boring.</p>
+    </div>
+    <div class="about-block">
+      <strong>// PHILOSOPHY</strong>
+      <p>From cPanel/WHM to Kubernetes clusters — worked across the full infra stack. Currently leveling up in cloud-native tooling and platform engineering.</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><span class="num">3+</span><span class="lbl">YRS OPS</span></div>
+      <div class="stat-box"><span class="num">3</span><span class="lbl">COMPANIES</span></div>
+      <div class="stat-box"><span class="num">∞</span><span class="lbl">TICKETS</span></div>
+    </div>
+  </div>
+
+  <!-- ── SKILLS PAGE ── -->
+  <div id="page-skills" class="page">
+    <button class="back-btn" onclick="showPage('home')">← BACK</button>
+    <div class="page-title">STACK</div>
+
+    <div class="terminal-box">
+      <div class="term-header">
+        <div class="term-dot" style="background:#cc2200"></div>
+        <div class="term-dot" style="background:#cc8800"></div>
+        <div class="term-dot" style="background:#00aa44"></div>
+        <span class="term-title">kamiops@devbox:~$</span>
+      </div>
+      <div id="term-output"></div>
+    </div>
+  </div>
+
+  <!-- ── WORK PAGE ── -->
+  <div id="page-work" class="page">
+    <button class="back-btn" onclick="showPage('home')">← BACK</button>
+    <div class="page-title">WORK</div>
+    {% for job in experience %}
+    <div class="exp-entry">
+      <div class="exp-company">{{ job.company }}</div>
+      <div class="exp-role">{{ job.role }}</div>
+      <div class="exp-period">{{ job.period }}</div>
+      <div class="exp-desc">{{ job.desc }}</div>
+      <div class="exp-chips">
+        {% for tag in job.tags %}<span class="chip">{{ tag }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- ── CONTACT PAGE ── -->
+  <div id="page-contact" class="page">
+    <button class="back-btn" onclick="showPage('home')">← BACK</button>
+    <div class="page-title">CONTACT</div>
+    <div class="contact-entry">
+      <div class="contact-label">EMAIL</div>
+      <a class="contact-value" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+    </div>
+    <div class="contact-entry">
+      <div class="contact-label">LINKEDIN</div>
+      <a class="contact-value" href="{{ contact.linkedin_url }}" target="_blank">{{ contact.linkedin_label }}</a>
+    </div>
+    <div class="contact-entry">
+      <div class="contact-label">PHONE</div>
+      <a class="contact-value" href="tel:{{ contact.phone_href }}">{{ contact.phone_display }}</a>
+    </div>
+    <div class="contact-entry">
+      <div class="contact-label">LOCATION</div>
+      <span class="contact-value">{{ contact.location }}</span>
+    </div>
+  </div>
+
+  <!-- ── EDU PAGE ── -->
+  <div id="page-edu" class="page">
+    <button class="back-btn" onclick="showPage('home')">← BACK</button>
+    <div class="page-title">EDUCATION</div>
+    {% for edu in education %}
+    <div class="exp-entry">
+      <div class="exp-company">{{ edu.school }}</div>
+      <div class="exp-role">{{ edu.degree }}</div>
+      <div class="exp-period">{{ edu.period }}</div>
+      <div class="exp-desc">{{ edu.desc }}</div>
+      <div class="exp-chips">{% for tag in edu.tags %}<span class="chip">{{ tag }}</span>{% endfor %}</div>
+    </div>
+    {% endfor %}
+    <div class="about-block" style="margin-top:14px">
+      <strong>// LANGUAGES</strong>
+      <p>{{ languages }}</p>
+    </div>
+  </div>
+
+</div><!-- /site -->
+
+<script>
+  // Skill data injected from Flask (app.py -> render_template context)
+  const skillData = {{ skill_data | tojson }};
+</script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
